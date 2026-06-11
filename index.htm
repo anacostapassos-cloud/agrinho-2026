@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026: Eco-Gestor do Amanhã</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Eco-Gestor: Produção, Planeta & Pessoas</h1>
+            <p>Concurso de Programação do Agrinho • O Jogo do Equilíbrio Sustentável</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section id="tela-inicial" class="caixa-jogo">
+            <h2>Bem-vindo ao Desafio!</h2>
+            <p>Gerenciar uma propriedade rural moderna exige inteligência de mercado, cuidado ecológico e, acima de tudo, <strong>respeito às pessoas</strong> que fazem a terra prosperar.</p>
+            <p>Sua missão é tomar decisões equilibradas. Se qualquer indicador chegar a 0%, a fazenda entra em colapso!</p>
+            <button onclick="iniciarJogo()" class="btn-principal">Começar Simulação</button>
+        </section>
+
+        <div id="tela-jogo" class="escondido">
+            <section class="painel-status">
+                <div class="status-item" id="pilar-producao">
+                    <span class="label">🚜 Produção</span>
+                    <div class="barra-fundo"><div id="barra-producao" class="barra-preenchimento producao"></div></div>
+                    <span id="txt-producao" class="valor">50%</span>
+                </div>
+                
+                <div class="status-item" id="pilar-ambiente">
+                    <span class="label">🌱 Meio Ambiente</span>
+                    <div class="barra-fundo"><div id="barra-ambiente" class="barra-preenchimento ambiente"></div></div>
+                    <span id="txt-ambiente" class="valor">50%</span>
+                </div>
+
+                <div class="status-item" id="pilar-pessoas">
+                    <span class="label">🤝 Respeito Humano</span>
+                    <div class="barra-fundo"><div id="barra-pessoas" class="barra-preenchimento pessoas"></div></div>
+                    <span id="txt-pessoas" class="valor">50%</span>
+                </div>
+            </section>
+
+            <section class="caixa-jogo">
+                <h2 id="titulo-rodada">Carregando...</h2>
+                <div id="feed-impacto" class="escondido"></div>
+                <p id="texto-situacao">Texto da pergunta aqui.</p>
+                
+                <div class="opcoes-container">
+                    <button id="btn-opcao1" onclick="escolherOpcao(1)">Opção A</button>
+                    <button id="btn-opcao2" onclick="escolherOpcao(2)">Opção B</button>
+                </div>
+            </section>
+        </div>
+        
+        <section id="tela-fim" class="caixa-jogo escondido">
+            <h2 id="resultado-titulo">Fim de Jogo</h2>
+            <p id="resultado-texto"></p>
+            
+            <div id="vitrine-medalhas" class="escondido">
+                <h3>Medalhas de Mérito Conquistadas:</h3>
+                <div class="medalhas-container" id="lista-medalhas"></div>
+            </div>
+
+            <button onclick="reiniciarJogo()" class="btn-principal btn-reiniciar">Tentar Novamente</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Concurso Agrinho - Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>ytn
+</html>
